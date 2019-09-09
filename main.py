@@ -136,7 +136,9 @@ def isIn(l,e):
     Returns true if element e is in list l
     '''
     toReturn = ''
-    
+    for x in l: 
+        if x==e:
+            return True
     
     return toReturn
 
