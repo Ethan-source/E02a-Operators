@@ -112,7 +112,7 @@ def whichChar(s,a):
     Returns the character at position a of string s
     '''
     toReturn = ''
-    
+    toReturn = s[a]
     return toReturn
 
 def substr(s,a1,a2):
@@ -120,7 +120,7 @@ def substr(s,a1,a2):
     Returns a substring of s (from position a1 to a2)
     '''
     toReturn = ''
-    # add your code here
+    toReturn= s[a1:a2]
     return toReturn
 
 def reverseStr(s):
@@ -128,7 +128,7 @@ def reverseStr(s):
     Returns a string which is a reversed version of s
     '''
     toReturn = ''
-    toReturn = reverseStr(s)
+    toReturn = s[::-1]
     return toReturn
 
 def isIn(l,e):
@@ -136,7 +136,8 @@ def isIn(l,e):
     Returns true if element e is in list l
     '''
     toReturn = ''
-    # add your code here
+    
+    
     return toReturn
 
 def randomElement(l):
@@ -144,7 +145,7 @@ def randomElement(l):
     Returns a random element of list l
     '''
     toReturn = ''
-    # add your code here
+    toReturn = random.choice(l)
     return toReturn
 
 def randomNumber():
@@ -152,7 +153,7 @@ def randomNumber():
     Returns a random number between 1000 and 9999
     '''
     toReturn = 0
-    # add your code here
+    toReturn = random.randint(1000,9999)
     return toReturn
 
 def reverseList(l):
@@ -160,15 +161,15 @@ def reverseList(l):
     Returns a list which is a mirror of l (each element is present in reverse order from l)
     '''
     toReturn = []
-    # add your code here
+    toReturn = l[::-1]
     return toReturn
 
 def shuffleList(l):
     '''
     Returns a list which has all the elements of l in a random order
     '''
-    toReturn = []
-    # add your code here
+    toReturn = [i for i in l]
+    random.shuffle(toReturn)
     return toReturn
 
 def listUntil(a):
@@ -176,7 +177,12 @@ def listUntil(a):
     Returns a list contains numbers from 0 to a
     '''
     toReturn = []
-    # add your code here
+    if a >=0:
+        for i in range (0,a):
+            toReturn.insert(i,i+1) 
+    elif a < 0: 
+        for i in range (0 +a,0):
+            toReturn.insert(i-a,i)
     return toReturn
 
 
